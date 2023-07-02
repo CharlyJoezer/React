@@ -1,11 +1,10 @@
 import './App.css';
-import {WelcomeH2} from './Welcome'
+import Button from './Button'
 
 function App() {
   return (
     <div className="App">
-      <WelcomeH2 children="Hello World"/>
-      <WelcomeH2>Woe kanjud</WelcomeH2>
+      <Button>Test button</Button>
     </div>
   );
 }
