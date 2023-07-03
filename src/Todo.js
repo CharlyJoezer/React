@@ -20,10 +20,10 @@ function Todo(){
 
         if(edit.id){
             const editTodoIndex = todos.findIndex(function(todo){
-                return todo.id == edit.id
+                return todo.id === edit.id
             });
             const updatedTodo = {
-                ... edit,
+                ...edit,
                 activity
             }
             const updatedTodos = [...todos]
@@ -33,7 +33,7 @@ function Todo(){
 
         }
 
-        setTodos([... todos, {
+        setTodos([...todos, {
             id : generateId(),
             activity,
             done : false
@@ -43,7 +43,7 @@ function Todo(){
 
     function removeTodoHandler(todoId){
         const filterTodos = todos.filter(function(todo){
-            return todo.id != todoId;
+            return todo.id !== todoId;
         })
 
         setTodos(filterTodos)
@@ -63,11 +63,11 @@ function Todo(){
 
     function doneTodoHandler(todo){
         const doneTodo = {
-            ... todo,
+            ...todo,
             done : todo.done ? false : true
         } 
         const doneTodoIndex = todos.findIndex(function(currenTodo){
-            return currenTodo.id == todo.id;
+            return currenTodo.id === todo.id;
         });
         
 
